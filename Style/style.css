@@ -1,0 +1,519 @@
+/*******************************************************************************************************************************
+ Reset 
+ ******************************************************************************************************************************/
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+/******************************************************************************************************************************* 
+Eléments génériques 
+******************************************************************************************************************************/
+
+body {
+   font-family: 'Montserrat', sans-serif;
+
+}
+header{
+   height: 10%;
+}
+main{
+   height: 80%;
+   width: 60%;
+}
+footer{
+   height: 10%;
+   width: 60%;
+}
+img{
+   max-width: 100%;
+}
+
+/*******************************************************************************************************************************
+Mise en forme Titres 
+******************************************************************************************************************************/
+
+
+a{
+   text-decoration: none;
+}
+
+/******************************************************************************************************************************
+Position et taille LOGO 
+******************************************************************************************************************************/
+
+.logo{
+   display: flex;
+   justify-content: center;
+}
+.logo:hover {
+   /* Survol LOGO*/
+   opacity: 0.6;
+   transition: all 0.2s ease-in-out;
+}
+
+/*******************************************************************************************************************************
+Mise en forme principale 
+******************************************************************************************************************************/
+#quizLogo{
+   
+   height: auto;
+   display: flex;
+   justify-content: center;
+   
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+}
+
+main {
+   background-color: var(--color-primary);   
+   padding: 20px;
+   border-radius: 20px;
+   margin:0px;
+}
+
+footer{
+   
+  
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between
+   
+}
+
+
+footer img {
+   
+   margin-right:20px;
+   margin-left: 20px;
+   width: 100px;
+ 
+   
+}
+
+
+/*******************************************************************************************************************************
+Mise en forme de la zone ou est affichée la question
+******************************************************************************************************************************/
+.zoneQuestion {
+   
+   border: 1px solid;
+   
+   border-color: black;
+   border-radius: 0px;
+   margin-top: 40px;
+   padding: 20px;
+   font-size: 20px;
+   color: black;
+   
+}
+
+
+/*******************************************************************************************************************************
+Zone réponse utilisateur 
+******************************************************************************************************************************/
+.zoneReponseUtilisateur{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   font-size: 20px;
+   margin:10px 10px;
+}
+
+#boutonValider {
+   width: 50px ;
+   min-width: 30px;
+  background-color: none;
+}
+ button#boutonValider{
+   border: none;
+   background: none;
+}
+#boutonValider:hover {
+   opacity: 0.6;
+   transition: all 0.2s ease-in-out;
+}
+
+.boutonTheme {
+   font-size: 40px;
+   padding: 20px;
+   color: var(--color-tertiary);
+   border-style: none;
+}
+
+.score {
+   font-family: 'Orbitron', sans-serif;;
+   font-size: 30px;
+   padding: 20px;
+   color: black;
+}
+
+
+/**************************************************************************************************************************** 
+Mise en forme des boutons radio 
+****************************************************************************************************************************/
+.listeBoutonTheme{
+   width: 100%;
+}
+
+.listeBoutonTheme input[type="radio"] {
+   display: none;
+   margin: 0;
+   
+}
+
+.listeBoutonTheme input[type="radio"]+label {
+   
+   
+   font-size: 20px;
+   color: black;
+   background-color: white;
+   border: 1px solid transparent;
+   transition: all 0.4s ease-in-out;
+   margin: 0;
+}
+
+#themeGeographie:hover+label {
+   background-color: #009900;
+   cursor: pointer;
+}
+
+#themeGeographie:checked+label {
+   background-color: #00e600;
+ 
+}
+
+#themeHistoire:hover+label {
+   background-color: #cc6600;
+   cursor: pointer;
+}
+
+#themeHistoire:checked+label {
+   background-color: #ff8000;
+   
+}
+
+#themeMathematiques:hover+label {
+   background-color: #4d4dff;
+   cursor: pointer;
+}
+
+#themeMathematiques:checked+label {
+   background-color: #6666ff;
+   
+}
+
+#themeSVT:hover+label {
+   background-color:#cccc00;
+   cursor: pointer;
+}
+
+#themeSVT:checked+label {
+   background-color: #ffff00;
+   
+}
+
+#themePhilosophie:hover+label {
+   background-color: #990073;
+   cursor: pointer;
+}
+
+#themePhilosophie:checked+label {
+   background-color: #e600ac;
+   
+}
+
+#themeLitterature:hover+label {
+   background-color: #b30000;
+   cursor: pointer;
+}
+
+#themeLitterature:checked+label {
+   background-color: #e60000;
+ 
+}
+
+/*******************************************************************************************************************************
+ Mise en forme bouton Partager votre score / Valider
+ ******************************************************************************************************************************/
+
+
+#boutonValider:hover{
+   cursor: pointer;
+}
+.partageScore{
+   display: flex;
+   justify-content: center;
+   
+   
+}
+.partageScore button{
+   display: none;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   background: none;
+   font-size: 25px;
+   font-family: 'Orbitron', sans-serif;
+}
+ .partageScore img{
+   width: 50px;
+}
+.partageScore button:hover{
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+/*******************************************************************************************************************************
+ * POP UP Accueil
+ ******************************************************************************************************************************/
+
+.popupBackgroundAccueil {
+   display: flex;
+   position: fixed;
+   background-color: rgba(255, 255, 255, 0.9);
+   color: white;
+   height: 100vh;
+   width: 100vw;
+}
+
+.popupAccueil {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+  width: 50%;
+   padding: 20px;
+   justify-content: center;
+   align-items: center;
+   text-align: start;
+   background-color: white;
+   color: black;
+   border: 1px solid;
+   
+   border-color: black;
+   border-radius: 5px;
+}
+
+.popupAccueil button {
+   margin: 40px;
+   font-size: 40px;
+   padding: 20px;
+}
+
+.desactive {
+   display: none !important;
+}
+
+.regles{
+   font-family: 'Montserrat', sans-serif;
+   font-size: 25px;
+   padding: 0px 50px 0px 50px;
+   list-style: inside;
+   list-style-type: square;
+}
+.regles li{
+   padding-top:10px ;
+}
+#boutonJouer{
+   width: 200px;
+}
+button#boutonJouer{
+   border: none;
+   background: none;
+}
+#boutonJouer:hover {
+   opacity: 0.6;
+   transition: all 0.2s ease-in-out;
+   cursor: pointer;
+}
+/****************************************************************************************************************************** 
+ * POP UP Partage score
+ *****************************************************************************************************************************/
+.popupBackground {
+   display: none;
+   position: fixed;
+   background-color: rgba(255, 255, 255, 0.9);
+   height: 100vh;
+   width: 100vw;
+
+}
+
+.active {
+   /** permet d'afficher pop up grace à fonction afficherPopup */
+   display: flex !important;
+}
+
+.popup {
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   padding: 20px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-color: white;
+   color: black;
+   border: 1px solid;
+   
+   border-color: black;
+   
+
+}
+
+.popup form {
+   display: flex;
+   flex-direction: column;
+
+}
+
+.popup input {
+   margin-bottom: 20px;
+
+}
+
+.popup button {
+   margin: auto;
+   padding: 10px;
+}
+
+#erreurMessage {
+   padding: 20px;
+}
+
+#zoneTimer {
+   color: white;
+   height: 2em;
+   text-align: center;
+   line-height: 2;
+   background-repeat: no-repeat;
+   background-size: 0;
+}
+
+/******************************************************************************************************************************
+* ANIMATIONS
+******************************************************************************************************************************/
+
+
+#progress-bar {
+   
+   width: 100%;
+   height: 10px;
+   border: 1px solid #ccc;
+   overflow: hidden;
+   border: none;
+}
+
+#progress {
+   height: 100%;
+   width: 100%;
+   background-color: #00BF63;
+   transition: width 1s linear;
+   border-radius: 0px;
+}
+.flashBonneReponse {
+   animation: flashBonneReponseAnimation 1s linear;
+}
+@keyframes flashBonneReponseAnimation {
+   0% {
+       background-color: transparent;
+   }
+   50% {
+       background-color: rgb(0, 255, 0);
+   }
+   100% {
+       background-color: transparent;
+   }
+}
+
+.flashMauvaiseReponse {
+   animation: flashMauvaiseReponseAnimation 1s linear;
+}
+@keyframes flashMauvaiseReponseAnimation {
+   0% {
+       background-color: transparent;
+   }
+   50% {
+       background-color: rgb(255, 0, 0);
+   }
+   100% {
+       background-color: transparent;
+   }
+}
+
+/******************************************************************************************************************************
+* Media Queries
+******************************************************************************************************************************/
+
+/* Full HD */
+@media only screen and (min-width: 1920px) {
+   body {
+      font-size: 1.125em;
+   }
+   .regles {      
+      font-size: 1.125em;
+   }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+   body {
+      font-size: 1em;
+   }
+
+   main {
+      width: 80%;
+   }
+
+   .regles {      
+      font-size: 1em;
+   }
+   #boutonJouer{
+      width: 150px;
+   }
+}
+
+
+/* Tablette */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+   body {
+      font-size: 0.875em; 
+   }
+
+   main {
+      width: 90%;
+   }
+
+   .regles {      
+      font-size: 0.875em;
+   }
+   #boutonJouer{
+      width: 150px;
+   }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+   body {
+      font-size: 0.75em; 
+   }
+
+   main, footer {
+      width: 100%;
+   }
+
+   .regles {      
+      font-size: 0.75em;
+   }
+   #boutonJouer{
+      width: 100px;
+   }
+}

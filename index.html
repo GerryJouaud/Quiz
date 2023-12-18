@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mon Quizz</title>
+    <!-- Fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="Style/style.css">
+    <!-- Fichier JS pour le fonctionnement du jeu -->
+    <!-- Police d'écriture-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap" rel="stylesheet">
+
+    <!-- Police d'écriture-->
+    <script src="Script/config.js" defer></script>
+    <script src="Script/popup.js" defer></script>
+    <script src="Script/script.js" defer></script>
+    <script src="Script/main.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <img id="quizlogo" src="Images/Quiz.png" />
+    </header>
+
+    <main>
+
+        <div class="listeBoutonTheme">
+
+            <input type="radio" name="boutonTheme" id="themeGeographie" value="1">
+            <label for="themeGeographie">Géographie</label>
+            <input type="radio" name="boutonTheme" id="themeHistoire" value="2">
+            <label for="themeHistoire">Histoire</label>
+            <input type="radio" name="boutonTheme" id="themeMathematiques" value="3">
+            <label for="themeMathematiques">Mathématique</label>
+            <input type="radio" name="boutonTheme" id="themeSVT" value="4">
+            <label for="themeSVT">Science</label>
+            <input type="radio" name="boutonTheme" id="themePhilosophie" value="5">
+            <label for="themePhilosophie">Philosophie</label>
+            <input type="radio" name="boutonTheme" id="themeLitterature" value="6">
+            <label for="themeLitterature">Littérature</label>
+        </div>
+
+        <section class="interfaceUtilisateur">
+
+
+
+            <div class="zoneQuestion"> Voici la question</div>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <div class="zoneReponseUtilisateur">
+                <label for="zoneReponseUtilisateur">Votre réponse</label>
+                <input class="zoneReponseUtilisateur" type="text" name="zoneReponseUtilisateur"
+                    id="zoneReponseUtilisateur">
+
+                <button class="zoneReponseUtilisateur" id="boutonValider"> <img
+                        src="Images/BoutonValider.png" /></button>
+            </div>
+
+            
+        </section>
+
+
+        <div class="score">
+            Score : <span>0</span>
+            <div class=partageScore>
+                <button>Partagez votre score <img src="Images/partager.png" /> </button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="logo">
+
+        <a target="_blank" href="https://gerryjouaud.github.io/CV-WEBSITE-V1/index.html">
+            <img src="Images/logo.png" id="logo" alt="Logo Gerry Jouaud" />
+        </a>
+
+
+    </footer>
+    <!-- Pop up partage du score-->
+    <div class="popupBackground">
+        <div class="popup">
+
+            <form novalidate>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Nicolas Dupont">
+                <label for="email">Avec qui souhaitez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nicolas.dupont@gmail.com">
+                <button id="boutonEnvoyerMail">Envoyer</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Pop up Accueil -->
+    <div class="popupBackgroundAccueil">
+        <div class="popupAccueil">
+            <img src="Images/titrequiz.png" id="imageTitreQuiz" />
+            <ul class="regles">
+                <li> Vous avez deux minutes pour répondre à un maximum de questions autour de six thèmes</li>
+                <li> Vous pouvez changer de thème <b>uniquement si vous avez répondu correctement à la question précédente</b>
+                </li>
+                <li> Attention à l'orthographe, <b>les majuscules sont indispensables, une réponse avec une faute est
+                    incorrecte</b></li>
+                <li> La réponse doit se composer ainsi: <b>M</b>ot, année, <b>P</b>rénom <b>N</b>om </li>
+                <li> <u>Exemple:</u> Dans quelle région parle t-on Breton ? <u><b>B</b>retagne</u></li>
+            </ul>
+            <button class="zoneReponseUtilisateur" id="boutonJouer"> <img
+                src="Images/BoutonValider.png" /></button>
+    </div>
+
+        </div>
+    </div>
+
+    </div>
+    <!-- Pop up partage du score-->
+</body>
+
+</html>
